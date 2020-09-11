@@ -6,7 +6,7 @@ LightingSettings:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PC Lighting
+  m_Name: Lighting
   serializedVersion: 2
   m_GIWorkflowMode: 0
   m_EnableBakedLightmaps: 1
@@ -22,9 +22,9 @@ LightingSettings:
   m_Padding: 2
   m_TextureCompression: 1
   m_AO: 0
-  m_AOMaxDistance: 1
-  m_CompAOExponent: 1
-  m_CompAOExponentDirect: 0
+  m_AOMaxDistance: 22.43
+  m_CompAOExponent: 10
+  m_CompAOExponentDirect: 10
   m_ExtractAO: 0
   m_MixedBakeMode: 2
   m_LightmapsBakeMode: 1
