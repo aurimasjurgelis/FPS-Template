@@ -9,9 +9,10 @@ public class AmmoPickup : MonoBehaviour
     {
         if (other.tag == "Player" && !collected)
         {
-            collected = true;
             PlayerController.instance.activeGun.GetAmmo();
             Destroy(gameObject);
+            collected = true;
+            AudioManager.instance.PlaySFX("pickup_ammo");
         }
     }
 

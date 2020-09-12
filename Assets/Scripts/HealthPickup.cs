@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
+    private bool isCollected;
     public int healAmount;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !isCollected)
         {
             PlayerHealthController.instance.HealPlayer(healAmount);
             Destroy(gameObject);
+            AudioManager.instance.PlaySFX("pickup_health");
         }
     }
 }

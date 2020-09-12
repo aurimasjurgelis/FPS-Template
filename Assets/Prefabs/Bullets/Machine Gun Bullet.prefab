@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2102901621548909628}
   - component: {fileID: 690600681411810484}
   m_Layer: 9
-  m_Name: Bullet
+  m_Name: Machine Gun Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,7 +251,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8705737602083905582, guid: 6d979dd45954c1140bada80020ecc10e, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 17018fbdc5aae794e95ec9723d3a9f5e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c057fbde4abbb054c8b7b5dce191cbe7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

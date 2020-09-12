@@ -42,6 +42,11 @@ public class PlayerController : MonoBehaviour
     public float adsSpeed = 2f;
 
     public GameObject muzzleFlash;
+    public AudioSource footstepFast;
+    public AudioSource footstepSlow;
+
+    public float bounceAmount;
+    private bool bounce;
 
     public void Start()
     {
@@ -97,12 +102,21 @@ public class PlayerController : MonoBehaviour
             {
                 moveInput.y = jumpPower;
                 canDoubleJump = true;
+                AudioManager.instance.PlaySFX("player_jump");
             }
             else if (canDoubleJump && Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("Double Jumping...");
                 moveInput.y = jumpPower;
                 canDoubleJump = false;
+                AudioManager.instance.PlaySFX("player_jump");
+            }
+
+            if(bounce)
+            {
+                bounce = false;
+                moveInput.y = bounceAmount;
+                canDoubleJump = true;
             }
 
             characterController.Move(moveInput * Time.deltaTime);
@@ -236,5 +250,11 @@ public class PlayerController : MonoBehaviour
             SwitchGun();
         }
 
+    }
+
+    public void Bounce(float bounceForce)
+    {
+        bounceAmount = bounceForce;
+        bounce = true;
     }
 }

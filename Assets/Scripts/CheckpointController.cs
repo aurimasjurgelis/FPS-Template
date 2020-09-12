@@ -33,6 +33,7 @@ public class CheckpointController : MonoBehaviour
         {
             PlayerPrefs.SetString(SceneManager.GetActiveScene().name + "_checkpoint", checkpointName);
             Debug.Log("Player hit " + checkpointName);
+            AudioManager.instance.PlaySFX("checkpoint");
         }
     }
 }

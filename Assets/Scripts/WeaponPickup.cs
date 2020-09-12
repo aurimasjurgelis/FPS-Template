@@ -14,6 +14,7 @@ public class WeaponPickup : MonoBehaviour
             PlayerController.instance.AddGun(gunName);
             Destroy(gameObject);
             collected = true;
+            AudioManager.instance.PlaySFX("pickup_gun");
         }
     }
 }
